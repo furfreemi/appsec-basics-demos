@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="${appName}"></title>
+    <link rel=stylesheet type="text/css" th:href="@{/css/home.css}">
+</head>
+<body>
+<h1>My Banking App</h1>
+
+Current Balance: $<span th:text="${balance}"></span>
+
+<h2>New transaction</h2>
+<form action="#" th:action="@{/transaction}" th:object="${transaction}" method="post">
+    <p>Recipient: <input type="text" th:field="*{recipient}" /></p>
+    <p>Amount: $<input type="text" th:field="*{amount}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+<h2>Transactions</h2>
+<p th:each="transaction : ${transactions}">
+    <span th:text="${transaction.formattedDate}"></span><br>
+    Amount: $<span th:text="${transaction.amount}"></span><br>
+    Recipient: <span th:text="${transaction.recipient}"></span><br>
+</p>
+
+<script th:src="@{/js/home.js}"></script>
+</body>
+</html>
