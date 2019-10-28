@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head><title th:text="${appName}"></title></head>
+<body>
+<h1>asdf</h1>
+<label for="postContent">Post: </label>
+<div>
+    <textarea id="postContent"></textarea>
+</div>
+<div>
+    <button id="submitContentOpen">Submit (open)</button>
+    <button id="submitContentControlled">Submit (controlled)</button>
+</div>
+<script th:src="@{/js/home.js}"></script>
+</body>
+</html>
