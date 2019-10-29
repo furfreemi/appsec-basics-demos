@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="${appName}"></title>
+    <link rel=stylesheet type="text/css" th:href="@{/css/home.css}">
+</head>
+<body>
+<h1>Awesome Shopping Site</h1>
+<h2>Admin Portal</h2>
+
+<h2>Orders</h2>
+<p th:each="order : ${orders}">
+    <span th:utext="${order.name}"></span><br>
+    <span th:text="${order.address}"></span><br>
+    Total: $<span th:text="${order.amount}"></span><br>
+    Payment info: <span th:text="${order.creditCardNumber}"></span><br>
+</p>
+
+</body>
+</html>
