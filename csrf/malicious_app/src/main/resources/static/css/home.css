@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+    color: white;
+}
+
 .post {
     border-bottom:1px solid grey;
     padding: 5px 0;
