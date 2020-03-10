@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="asdf"></title>
+    <link rel=stylesheet type="text/css" th:href="@{/css/home.css}">
+</head>
+<body>
+<h1>Item Search</h1>
+
+<form action="#" th:action="@{/items}" th:object="${item}" method="post">
+    Name: <input type="text" th:field="*{name}" /><br>
+    <input type="submit" value="Search" /> <br>
+</form>
+
+</body>
+</html>

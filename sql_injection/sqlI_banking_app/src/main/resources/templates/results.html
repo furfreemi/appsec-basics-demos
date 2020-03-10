@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="${appName}"></title>
+    <link rel=stylesheet type="text/css" th:href="@{/css/home.css}">
+</head>
+<body>
+<h1>Shopping Site</h1>
+
+<h2>Search results</h2>
+<table>
+    <tr>
+        <td class="b">Item Name</td>
+        <td class="b">Item Description</td>
+    </tr>
+
+<tr th:each="item : ${items}">
+    <td><p th:text="${item.name}"></p></td>
+    <td><p th:text="${item.description}"></p></td>
+</tr>
+</table>
+
+</body>
+</html>
