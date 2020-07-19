@@ -34,6 +34,6 @@ if [ "$APP" = "sqli" ]; then
    cd sql_injection/sqlI_banking_app;
    ./gradlew bootRun &
 
-   echo "Starting banking app on port 8080";
+   echo "Starting search app on port 8080";
    cd ../../;
 fi
